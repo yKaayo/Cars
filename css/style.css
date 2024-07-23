@@ -1,0 +1,13 @@
+/* Carousel */
+.carousel-indicators {
+  display: flex;
+  gap: 16px;
+}
+
+.carousel-indicators [data-bs-target] {
+  height: 28px;
+  width: 28px;
+  background-color: transparent;
+  border: 3px solid var(--bs-light);
+  border-radius: 50%;
+}

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Caio" />
     <title>Cars</title>
 
     <!-- Bootstrap -->
@@ -21,13 +22,14 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
     <main>
-      <div class="vh-100">
+      <div class="position-relative vh-100">
         <!-- Navbar -->
-        <header class="position-fixed vw-100 z-1">
-          <nav class="navbar navbar-expand-md" data-bs-theme="dark">
+        <header class="position-fixed vw-100 px-2 z-2">
+          <nav class="navbar navbar-expand-sm" data-bs-theme="dark">
             <div class="container-fluid">
               <a href="#" class="me-3" aria-current="page"
                 ><img src="./images/67530_cabriolet_car_icon.png" alt="car"
@@ -43,8 +45,8 @@
               >
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav hstack gap-3 me-auto">
                   <li class="nav-item">
                     <a class="nav-link active" href="#">LINK</a>
                   </li>
@@ -68,64 +70,106 @@
 
         <!-- Carousel -->
         <div
-          id="carousel"
-          class="carousel slide carousel-fade position-absolute top-0 start-0 h-100 z-0"
+          id="firstCarousel"
+          class="carousel slide carousel-fade"
           data-bs-ride="carousel"
         >
           <!-- Carousel Indicators -->
           <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carousel"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carousel"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carousel"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
+            <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+              <circle
+                r="14"
+                cx="50"
+                cy="50"
+                fill="#ffffff00"
+                type="button"
+                role="button"
+                data-bs-target="#firstCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              />
+            </svg>
+            <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+              <circle
+                r="14"
+                cx="50"
+                cy="50"
+                fill="#ffffff00"
+                type="button"
+                role="button"
+                data-bs-target="#firstCarousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              />
+            </svg>
+            <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+              <circle
+                r="14"
+                cx="50"
+                cy="50"
+                fill="#ffffff00"
+                type="button"
+                role="button"
+                data-bs-target="#firstCarousel"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              />
+            </svg>
           </div>
 
           <!-- Videos -->
           <div class="carousel-inner h-100">
             <div class="carousel-item active h-100">
-              <video class="object-fit-cover w-100" autoplay muted loop>
+              <video
+                class="video position-relative vh-100 top-0 start-0 object-fit-cover w-100"
+                autoplay
+                muted
+                loop
+              >
                 <source src="./videos/video1.mp4" type="video/mp4" />
               </video>
-              <div class="carousel-caption d-none d-md-block">
+              <div class="carousel-caption d-none d-sm-block mb-4">
                 <p class="fs-4 fw-medium">Lorem, ipsum dolor.</p>
-                <h5 class="fs-1 fw-bold">Lorem, ipsum.</h5>
-                <p class="mb-5 mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <h2 class="fs-1 fw-bold mb-5">Lorem, ipsum.</h2>
+                <p class="mb-5 mt-4">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
               </div>
             </div>
-            <div class="carousel-item h-100">
-              <video class="object-fit-cover w-100" autoplay muted loop>
+            <div class="carousel-item top-0 start-0">
+              <video
+                class="video position-relative vh-100 top-0 start-0 object-fit-cover w-100"
+                autoplay
+                muted
+                loop
+              >
                 <source src="./videos/video2.mp4" type="video/mp4" />
               </video>
-              <div class="carousel-caption d-none d-md-block">
+              <div class="carousel-caption d-none d-sm-block mb-4">
                 <p class="fs-4 fw-medium">Lorem, ipsum dolor.</p>
-                <h5 class="fs-1 fw-bold">Lorem, ipsum.</h5>
-                <p class="mb-5 mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <h2 class="fs-1 fw-bold mb-5">Lorem, ipsum.</h2>
+                <p class="mb-5 mt-4">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
               </div>
             </div>
-            <div class="carousel-item h-100">
-              <video class="object-fit-cover w-100" autoplay muted loop>
+            <div class="carousel-item top-0 start-0 h-100">
+              <video
+                class="video position-relative vh-100 top-0 start-0 object-fit-cover w-100"
+                autoplay
+                muted
+                loop
+              >
                 <source src="./videos/video3.mp4" type="video/mp4" />
               </video>
-              <div class="carousel-caption d-none d-md-block">
+              <div class="carousel-caption d-none d-sm-block mb-4">
                 <p class="fs-4 fw-medium">Lorem, ipsum dolor.</p>
-                <h5 class="fs-1 fw-bold">Lorem, ipsum.</h5>
-                <p class="mb-5 mt-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <h2 class="fs-1 fw-bold mb-5">Lorem, ipsum.</h2>
+                <p class="mb-5 mt-4">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
               </div>
             </div>
           </div>
@@ -134,7 +178,7 @@
           <button
             class="carousel-control-prev"
             type="button"
-            data-bs-target="#carousel"
+            data-bs-target="#firstCarousel"
             data-bs-slide="prev"
           >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -143,7 +187,7 @@
           <button
             class="carousel-control-next"
             type="button"
-            data-bs-target="#carousel"
+            data-bs-target="#firstCarousel"
             data-bs-slide="next"
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -151,7 +195,155 @@
           </button>
         </div>
       </div>
-      <footer></footer>
+
+      <!-- Second Carousel -->
+      <!-- Text and Carousel -->
+      <section class="">
+        <div id="secondCarousel" class="carousel" data-bs-theme="dark">
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+              <circle
+                r="14"
+                cx="50"
+                cy="50"
+                fill="#ffffff00"
+                type="button"
+                role="button"
+                data-bs-target="#secondCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+                style="stroke: var(--bs-gray)"
+              />
+            </svg>
+            <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+              <circle
+                r="14"
+                cx="50"
+                cy="50"
+                fill="#ffffff00"
+                type="button"
+                role="button"
+                data-bs-target="#secondCarousel"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+                style="stroke: var(--bs-gray)"
+              />
+            </svg>
+            <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+              <circle
+                r="14"
+                cx="50"
+                cy="50"
+                fill="#ffffff00"
+                type="button"
+                role="button"
+                data-bs-target="#secondCarousel"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+                style="stroke: var(--bs-gray)"
+              />
+            </svg>
+          </div>
+
+          <!-- Text and Images -->
+          <div class="container-fluid h-100 d-flex justify-content-center">
+            <div class="carousel-inner carousel-text-img h-100">
+              <div class="carousel-item h-100 py-5 active">
+                <div
+                  class="d-flex justify-content-evenly align-items-center gap-3 h-100 flex-column flex-md-row"
+                >
+                  <div
+                    class="vstack carousel-text justify-content-center g-4 text-center text-md-start h-100 mb-4 mb-md-0"
+                  >
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repellendus necessitatibus at sapiente neque doloribus
+                      numquam nobis esse distinctio modi nostrum?
+                    </p>
+                    <a href="#">Lorem, ipsum.</a>
+                  </div>
+                  <div
+                    class="carousel-img-w d-flex justify-content-center h-100 w-45 mb-3 mb-md-2 pb-3"
+                  >
+                    <div class="carousel-img"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item h-100 py-5">
+                <div
+                  class="d-flex justify-content-evenly align-items-center gap-3 h-100 flex-column flex-md-row"
+                >
+                  <div
+                    class="vstack carousel-text justify-content-center g-4 text-center text-md-start h-100 mb-4 mb-md-0"
+                  >
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repellendus necessitatibus at sapiente neque doloribus
+                      numquam nobis esse distinctio modi nostrum?
+                    </p>
+                    <a href="#">Lorem, ipsum.</a>
+                  </div>
+                  <div
+                    class="carousel-img-w d-flex justify-content-center h-100 w-45 mb-3 mb-md-2 pb-3"
+                  >
+                    <div class="carousel-img"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item h-100 py-5">
+                <div
+                  class="d-flex justify-content-evenly align-items-center gap-3 h-100 flex-column flex-md-row"
+                >
+                  <div
+                    class="vstack carousel-text justify-content-center g-4 text-center text-md-start h-100 mb-4 mb-md-0"
+                  >
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Repellendus necessitatibus at sapiente neque doloribus
+                      numquam nobis esse distinctio modi nostrum?
+                    </p>
+                    <a href="#">Lorem, ipsum.</a>
+                  </div>
+                  <div
+                    class="carousel-img-w d-flex justify-content-center h-100 w-45 mb-3 mb-md-2 pb-3"
+                  >
+                    <div class="carousel-img"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Previous and Next -->
+          <button
+            class="carousel-control-prev d-block"
+            type="button"
+            data-bs-target="#secondCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next d-block"
+            type="button"
+            data-bs-target="#secondCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <footer>
+        
+      </footer>
     </main>
+    <script src="./js/script.js"></script>
   </body>
 </html>

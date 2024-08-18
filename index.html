@@ -26,7 +26,7 @@
   </head>
   <body>
     <main>
-      <div class="position-relative vh-100">
+      <section class="position-relative vh-100">
         <!-- Navbar -->
         <header class="position-fixed vw-100 px-2 z-2">
           <nav class="navbar navbar-expand-sm" data-bs-theme="dark">
@@ -70,7 +70,7 @@
 
         <!-- Carousel -->
         <div
-          id="firstCarousel"
+          id="hero-carousel"
           class="carousel slide carousel-fade"
           data-bs-ride="carousel"
         >
@@ -81,10 +81,9 @@
                 r="14"
                 cx="50"
                 cy="50"
-                fill="#ffffff00"
+                fill="transparent"
                 type="button"
-                role="button"
-                data-bs-target="#firstCarousel"
+                data-bs-target="#hero-carousel"
                 data-bs-slide-to="0"
                 class="active"
                 aria-current="true"
@@ -96,10 +95,9 @@
                 r="14"
                 cx="50"
                 cy="50"
-                fill="#ffffff00"
+                fill="transparent"
                 type="button"
-                role="button"
-                data-bs-target="#firstCarousel"
+                data-bs-target="#hero-carousel"
                 data-bs-slide-to="1"
                 aria-label="Slide 2"
               />
@@ -109,10 +107,9 @@
                 r="14"
                 cx="50"
                 cy="50"
-                fill="#ffffff00"
+                fill="transparent"
                 type="button"
-                role="button"
-                data-bs-target="#firstCarousel"
+                data-bs-target="#hero-carousel"
                 data-bs-slide-to="2"
                 aria-label="Slide 3"
               />
@@ -120,10 +117,10 @@
           </div>
 
           <!-- Videos -->
-          <div class="carousel-inner h-100">
-            <div class="carousel-item active h-100">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
               <video
-                class="video position-relative vh-100 top-0 start-0 object-fit-cover w-100"
+                class="hero-carousel-video position-relative vh-100 vw-100 object-fit-cover"
                 autoplay
                 muted
                 loop
@@ -138,9 +135,9 @@
                 </p>
               </div>
             </div>
-            <div class="carousel-item top-0 start-0">
+            <div class="carousel-item">
               <video
-                class="video position-relative vh-100 top-0 start-0 object-fit-cover w-100"
+                class="hero-carousel-video position-relative vh-100 vw-100 object-fit-cover"
                 autoplay
                 muted
                 loop
@@ -155,9 +152,9 @@
                 </p>
               </div>
             </div>
-            <div class="carousel-item top-0 start-0 h-100">
+            <div class="carousel-item">
               <video
-                class="video position-relative vh-100 top-0 start-0 object-fit-cover w-100"
+                class="hero-carousel-video position-relative vh-100 vw-100 object-fit-cover"
                 autoplay
                 muted
                 loop
@@ -178,7 +175,7 @@
           <button
             class="carousel-control-prev"
             type="button"
-            data-bs-target="#firstCarousel"
+            data-bs-target="#hero-carousel"
             data-bs-slide="prev"
           >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -187,19 +184,19 @@
           <button
             class="carousel-control-next"
             type="button"
-            data-bs-target="#firstCarousel"
+            data-bs-target="#hero-carousel"
             data-bs-slide="next"
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-      </div>
+      </section>
 
       <!-- Second Carousel -->
       <!-- Text and Carousel -->
       <section class="">
-        <div id="secondCarousel" class="carousel" data-bs-theme="dark">
+        <div id="second-carousel" class="carousel" data-bs-theme="dark">
           <!-- Indicators -->
           <div class="carousel-indicators">
             <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
@@ -210,12 +207,11 @@
                 fill="#ffffff00"
                 type="button"
                 role="button"
-                data-bs-target="#secondCarousel"
+                data-bs-target="#second-carousel"
                 data-bs-slide-to="0"
                 class="active"
                 aria-current="true"
                 aria-label="Slide 1"
-                style="stroke: var(--bs-gray)"
               />
             </svg>
             <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
@@ -226,10 +222,9 @@
                 fill="#ffffff00"
                 type="button"
                 role="button"
-                data-bs-target="#secondCarousel"
+                data-bs-target="#second-carousel"
                 data-bs-slide-to="1"
                 aria-label="Slide 2"
-                style="stroke: var(--bs-gray)"
               />
             </svg>
             <svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
@@ -240,90 +235,61 @@
                 fill="#ffffff00"
                 type="button"
                 role="button"
-                data-bs-target="#secondCarousel"
+                data-bs-target="#second-carousel"
                 data-bs-slide-to="2"
                 aria-label="Slide 3"
-                style="stroke: var(--bs-gray)"
               />
             </svg>
           </div>
 
-          <!-- Text and Images -->
-          <div class="container-fluid h-100 d-flex justify-content-center">
-            <div class="carousel-inner carousel-text-img h-100">
-              <div class="carousel-item h-100 py-5 active">
-                <div
-                  class="d-flex justify-content-evenly align-items-center gap-3 h-100 flex-column flex-md-row"
-                >
-                  <div
-                    class="vstack carousel-text justify-content-center g-4 text-center text-md-start h-100 mb-4 mb-md-0"
-                  >
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Repellendus necessitatibus at sapiente neque doloribus
-                      numquam nobis esse distinctio modi nostrum?
-                    </p>
-                    <a href="#">Lorem, ipsum.</a>
-                  </div>
-                  <div
-                    class="carousel-img-w d-flex justify-content-center h-100 w-45 mb-3 mb-md-2 pb-3"
-                  >
-                    <div class="carousel-img"></div>
-                  </div>
+          <!-- Texts and Images -->
+          <div class="carousel-inner h-100 w-100 p-5">
+            <div class="carousel-item active h-100">
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-center h-100 gap-5">
+                <img
+                  src="./images/automobile-art-7785235_1280.jpg"
+                  class="d-block img-fluid object-fit-cover h-90 m-0 p-0 ms-md-4 ps-md-4 pb-md-4 ms-lg-5 ps-lg-5"
+                  alt=""
+                />
+                <div class="text w-45 m-0 p-0 me-md-4 pe-md-4 me-lg-5 pe-lg-5 pb-md-0 pb-5 text-center text-md-end">
+                  <h2>Lorem, ipsum dolor.</h2>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores doloremque sint, modi cumque fugiat doloribus animi ab maxime blanditiis consequuntur!</p>
                 </div>
               </div>
-              <div class="carousel-item h-100 py-5">
-                <div
-                  class="d-flex justify-content-evenly align-items-center gap-3 h-100 flex-column flex-md-row"
-                >
-                  <div
-                    class="vstack carousel-text justify-content-center g-4 text-center text-md-start h-100 mb-4 mb-md-0"
-                  >
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Repellendus necessitatibus at sapiente neque doloribus
-                      numquam nobis esse distinctio modi nostrum?
-                    </p>
-                    <a href="#">Lorem, ipsum.</a>
-                  </div>
-                  <div
-                    class="carousel-img-w d-flex justify-content-center h-100 w-45 mb-3 mb-md-2 pb-3"
-                  >
-                    <div class="carousel-img"></div>
-                  </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-center h-100 gap-5">
+                <img
+                  src="./images/car-7785239_1280.jpg"
+                  class="d-block img-fluid object-fit-cover h-90 m-0 p-0 ms-md-4 ps-md-4 pb-md-4 ms-lg-5 ps-lg-5"
+                  alt=""
+                />
+                <div class="text w-45 m-0 p-0 me-md-4 pe-md-4 me-lg-5 pe-lg-5 pb-md-0 pb-5 text-center text-md-end">
+                  <h2>Lorem, ipsum dolor.</h2>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores doloremque sint, modi cumque fugiat doloribus animi ab maxime blanditiis consequuntur!</p>
                 </div>
               </div>
-              <div class="carousel-item h-100 py-5">
-                <div
-                  class="d-flex justify-content-evenly align-items-center gap-3 h-100 flex-column flex-md-row"
-                >
-                  <div
-                    class="vstack carousel-text justify-content-center g-4 text-center text-md-start h-100 mb-4 mb-md-0"
-                  >
-                    <h3>Lorem, ipsum dolor.</h3>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Repellendus necessitatibus at sapiente neque doloribus
-                      numquam nobis esse distinctio modi nostrum?
-                    </p>
-                    <a href="#">Lorem, ipsum.</a>
-                  </div>
-                  <div
-                    class="carousel-img-w d-flex justify-content-center h-100 w-45 mb-3 mb-md-2 pb-3"
-                  >
-                    <div class="carousel-img"></div>
-                  </div>
+            </div>
+            <div class="carousel-item h-100">
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-center h-100 gap-5">
+                <img
+                  src="./images/car-7785240_1280.jpg"
+                  class="d-block img-fluid object-fit-cover h-90 m-0 p-0 ms-md-4 ps-md-4 pb-md-4 ms-lg-5 ps-lg-5"
+                  alt=""
+                />
+                <div class="text w-45 m-0 p-0 me-md-4 pe-md-4 me-lg-5 pe-lg-5 pb-md-0 pb-5 text-center text-md-end">
+                  <h2>Lorem, ipsum dolor.</h2>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores doloremque sint, modi cumque fugiat doloribus animi ab maxime blanditiis consequuntur!</p>
                 </div>
               </div>
             </div>
           </div>
+
           <!-- Previous and Next -->
           <button
             class="carousel-control-prev d-block"
             type="button"
-            data-bs-target="#secondCarousel"
+            data-bs-target="#second-carousel"
             data-bs-slide="prev"
           >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -332,7 +298,7 @@
           <button
             class="carousel-control-next d-block"
             type="button"
-            data-bs-target="#secondCarousel"
+            data-bs-target="#second-carousel"
             data-bs-slide="next"
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -340,9 +306,7 @@
           </button>
         </div>
       </section>
-      <footer>
-        
-      </footer>
+      <footer></footer>
     </main>
     <script src="./js/script.js"></script>
   </body>

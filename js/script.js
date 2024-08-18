@@ -1,23 +1,31 @@
-const indicatorCircle = document.querySelectorAll("circle");
-const video = document.querySelectorAll(".video");
+const videos = document.querySelectorAll(".hero-carousel-video");
+const heroCarouselVideo = document.querySelectorAll(
+  "#hero-carousel .carousel-inner .carousel-item"
+);
+const heroCarouselIndicators = document.querySelectorAll(
+  "#hero-carousel .carousel-indicators svg circle"
+);
+const prev = document.querySelector("#hero-carousel .carousel-control-prev");
+const next = document.querySelector("#hero-carousel .carousel-control-next");
 
-function resetCircles() {
-  for (let i = 0; i < video.length; i++) {
-    function startCircles() {
-      let duracaoVideo = video[i].duration;
-      indicatorCircle[i].style.animation = `anim ${
-        duracaoVideo
-      }s linear forwards`;
-    }
-    
-    function endedCircles() {
-      indicatorCircle[i].style.strokeDashoffset = 472;
-      resetCircles();
-    }
+function getTimeVideo() {
+  videos.forEach((video, i) => {
+    video.addEventListener("loadedmetadata", () => {
+      let timeVideo = video.duration * 900; //There's a delay in transition beetween the videos
+      heroCarouselVideo[i].setAttribute("data-bs-interval", timeVideo);
 
-    video[i].addEventListener("play", startCircles);
-    video[i].addEventListener("ended", endedCircles);
-  }
+      video.addEventListener("play", () => {
+        heroCarouselIndicators[i].style.strokeDashoffset = 0;
+        heroCarouselIndicators[
+          i
+        ].style.animation = `spin ${timeVideo}ms linear forwards`;
+      });
+
+      video.addEventListener("ended", () => {
+        heroCarouselIndicators[i].style.strokeDashoffset = 88;
+      });
+    });
+  });
 }
 
-resetCircles();
+getTimeVideo();
